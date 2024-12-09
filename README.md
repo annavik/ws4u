@@ -48,3 +48,10 @@ We use [ESLint](https://eslint.org/) to find issues in the code. You can setup y
 # Run linter
 yarn lint
 ```
+
+We use [Prettier](https://prettier.io/) as a code formatter. You can setup your code editor to auto format the code, based on the project config. You can also run:
+
+```bash
+# Format code in folder src
+yarn format
+```

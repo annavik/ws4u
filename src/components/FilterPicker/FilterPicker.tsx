@@ -43,7 +43,7 @@ export const FilterPicker = ({
             checked={activeFilters.some(
               (activeFilter) =>
                 filter.type === activeFilter.type &&
-                filter.value === activeFilter.value
+                filter.value === activeFilter.value,
             )}
             id={`${filter.value}`}
             label={levelToLabel(filter) ?? filter.label}

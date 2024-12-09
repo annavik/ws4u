@@ -14,8 +14,8 @@ export const useFilters = (filterPickerConfig: FilterGroup[]) => {
   const removeFilter = ({ type, value }: Filter) =>
     setActiveFilters(
       activeFilters.filter(
-        (filter) => !(filter.type === type && filter.value === value)
-      )
+        (filter) => !(filter.type === type && filter.value === value),
+      ),
     );
 
   return {
@@ -31,7 +31,7 @@ const DELIMITER = ",";
 
 const useSearchParams = () => {
   const [searchParams, setSearchParams] = useState(
-    new URLSearchParams(window.location.search)
+    new URLSearchParams(window.location.search),
   );
 
   return {
@@ -60,7 +60,7 @@ const useActiveFilters = (config: FilterGroup[]) => {
       const filters = values
         .map((value) => {
           const config = filterGroup.filters.find(
-            (f) => `${f.value}`.toLowerCase() === value.toLowerCase()
+            (f) => `${f.value}`.toLowerCase() === value.toLowerCase(),
           );
 
           return config
@@ -86,10 +86,10 @@ const useActiveFilters = (config: FilterGroup[]) => {
     Object.entries(_.groupBy(filters, (filter) => filter.type)).map(
       ([type, filterGroup]) => {
         const values = filterGroup.map((filter) =>
-          `${filter.value}`.toLowerCase()
+          `${filter.value}`.toLowerCase(),
         );
         searchParams.append(type, values.join(DELIMITER));
-      }
+      },
     );
 
     // Update search params

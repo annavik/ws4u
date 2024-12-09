@@ -35,27 +35,27 @@ export const useFilteredGuidelines = ({
     switch (filterType as FilterType) {
       case "category": {
         filteredGudelines = filteredGudelines.filter((guideline) =>
-          filterGroup.some((filter) => filter.value === guideline.category.id)
+          filterGroup.some((filter) => filter.value === guideline.category.id),
         );
         break;
       }
       case "tag": {
         filteredGudelines = filteredGudelines.filter((guideline) =>
           filterGroup.some((filter) =>
-            guideline.tags.some((tag) => filter.value === tag)
-          )
+            guideline.tags.some((tag) => filter.value === tag),
+          ),
         );
         break;
       }
       case "effort": {
         filteredGudelines = filteredGudelines.filter((guideline) =>
-          filterGroup.some((filter) => filter.value === guideline.effort.level)
+          filterGroup.some((filter) => filter.value === guideline.effort.level),
         );
         break;
       }
       case "impact": {
         filteredGudelines = filteredGudelines.filter((guideline) =>
-          filterGroup.some((filter) => filter.value === guideline.impact.level)
+          filterGroup.some((filter) => filter.value === guideline.impact.level),
         );
         break;
       }

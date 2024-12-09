@@ -48,7 +48,7 @@ export const Guidelines = ({
     searchString,
   });
   const bookmarkGuidelines = filteredGuidelines.filter((guideline) =>
-    bookmarks.includes(guideline.id)
+    bookmarks.includes(guideline.id),
   );
 
   useLayoutEffect(() => {
@@ -72,7 +72,7 @@ export const Guidelines = ({
           {filterPickerConfig.map(
             ({ align, contentStyle, filters, label, type }) => {
               const numActiveFilters = activeFilters.filter(
-                (filter) => filter.type === type
+                (filter) => filter.type === type,
               ).length;
 
               return (
@@ -92,7 +92,7 @@ export const Guidelines = ({
                   removeFilter={removeFilter}
                 />
               );
-            }
+            },
           )}
         </div>
         {activeFilters.length > 0 && (

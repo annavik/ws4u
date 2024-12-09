@@ -17,7 +17,7 @@ export const Guideline = () => {
     // Scroll to selected element if specified in hash
     if (location.hash) {
       const elementToScroll = document.getElementById(
-        location.hash.replace("#", "")
+        location.hash.replace("#", ""),
       );
 
       if (elementToScroll) {

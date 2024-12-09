@@ -30,7 +30,7 @@ export const useGuidelines = (): {
 
         return guideline;
       }),
-    [data]
+    [data],
   );
 
   return {

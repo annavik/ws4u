@@ -32,7 +32,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             [styles.ghost]: theme === "ghost",
             [styles.solid]: theme === "solid",
           },
-          className
+          className,
         )}
         title={title}
         onClick={onClick}
@@ -41,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 export const LinkButton = ({
@@ -60,7 +60,7 @@ export const LinkButton = ({
         [styles.ghost]: theme === "ghost",
         [styles.solid]: theme === "solid",
       },
-      className
+      className,
     )}
     href={to}
     rel="noreferrer"

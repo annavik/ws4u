@@ -30,7 +30,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 export const IconLinkButton = ({
