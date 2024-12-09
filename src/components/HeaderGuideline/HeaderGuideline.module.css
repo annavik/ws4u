@@ -1,0 +1,46 @@
+.header {
+    margin: 72px 64px;
+  }
+  
+  .logo {
+    position: fixed;
+    display: flex;
+    top: 16px;
+    left: 16px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    width: 720px;
+    margin: 0 auto;
+  }
+  
+  .header h2 {
+    color: var(--neutral-11);
+  }
+  
+  .topBar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  @media only screen and (max-width: 960px) {
+    .header {
+      margin: 72px 16px 48px;
+    }
+  
+    .content {
+      width: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

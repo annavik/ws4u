@@ -6,6 +6,7 @@ import { getCompactId } from "../../utils/guideline";
 import { useGuidelines } from "../../utils/useGuidelines";
 import styles from "./Guideline.module.css";
 import { GuidelinesButton } from "./GuidelinesButton/GuidelinesButton";
+import HeaderGuideline from "../../components/HeaderGuideline/HeaderGuideline";
 
 export const Guideline = () => {
   const location = useLocation();
@@ -36,6 +37,7 @@ export const Guideline = () => {
 
   return (
     <>
+      <HeaderGuideline />
       <div className={styles.wrapper}>
         <GuidelinesButton />
         <GuidelineDetails guideline={guideline} />

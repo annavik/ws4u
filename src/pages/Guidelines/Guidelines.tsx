@@ -19,6 +19,7 @@ import styles from "./Guidelines.module.css";
 import { getFilterPickerConfig } from "./utils/getFilterPickerConfig";
 import { useFilteredGuidelines } from "./utils/useFilteredGuidelines";
 import { useFilters } from "./utils/useFilters";
+import { Header } from "../../components/Header/Header";
 
 interface GuidelinesProps {
   activeTab: string;
@@ -61,6 +62,7 @@ export const Guidelines = ({
 
   return (
     <>
+      <Header />
       <div className={styles.settings}>
         <SearchInput
           clearLabel="Clear search"
